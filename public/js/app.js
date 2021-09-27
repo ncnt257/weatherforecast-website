@@ -15,7 +15,7 @@ searchForm.addEventListener('submit', e => {
   message01.classList.remove('forecast-success');
   message02.classList.remove('forecast-error');
   message02.classList.remove('forecast-success');
-  fetch(`http://localhost:3000/weather?address=${location}`).then(response => {
+  fetch(`/weather?address=${location}`).then(response => {
     response.json().then(data => {
       if (data.error) {
         message01.classList.add('forecast-error');
